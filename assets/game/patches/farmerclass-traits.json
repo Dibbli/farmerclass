@@ -1,0 +1,32 @@
+[
+	{
+		"file": "config/traits.json",
+		"op": "add",
+		"path": "/-",
+		"value": {
+			"code": "farmer",
+			"type": "positive",
+			"attributes": { "produceDropRate": 0.25 }
+		}
+	},
+	{
+		"file": "config/traits.json",
+		"op": "add",
+		"path": "/-",
+		"value": {
+			"code": "burdened",
+			"type": "positive",
+			"attributes": { "armorWalkSpeedAffectedness": -0.35 }
+		}
+	},
+	{
+		"file": "config/traits.json",
+		"op": "add",
+		"path": "/-",
+		"value": {
+			"code": "gentlehands",
+			"type": "negative",
+			"attributes": { "meleeWeaponsDamage": -0.2 }
+		}
+	}
+]

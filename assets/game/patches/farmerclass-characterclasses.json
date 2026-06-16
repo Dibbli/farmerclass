@@ -1,0 +1,27 @@
+[
+	{
+		"file": "config/characterclasses.json",
+		"op": "add",
+		"path": "/-",
+		"value": {
+			"enabled": true,
+			"code": "farmer",
+			"traits": [
+				"farmer",
+				"burdened",
+				"gentlehands",
+				"claustrophobic"
+			],
+			"gear": [
+				{ "type": "item", "code": "clothes-head-straw-hat" },
+				{ "type": "item", "code": "clothes-nadiya-face-grain" },
+				{ "type": "item", "code": "clothes-upperbody-clockmaker-shirt" },
+				{ "type": "item", "code": "clothes-shoulder-jord-robe" },
+				{ "type": "item", "code": "clothes-nadiya-lowerbody-shepherd" },
+				{ "type": "item", "code": "clothes-foot-forlorn-shoes" },
+				{ "type": "item", "code": "clothes-nadiya-hand-blacksmith" },
+				{ "type": "item", "code": "clothes-nadiya-waist-shepherd" }
+			]
+		}
+	}
+]

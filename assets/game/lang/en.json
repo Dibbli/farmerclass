@@ -1,0 +1,20 @@
+{
+	"characterclass-farmer": "Farmer",
+	"characterdesc-farmer": "<font color=\"#99c9f9\"><i>Some folk break the earth for ore. You break it for bread.</i></font><br><br>Farmers reap far more from their crops, and a lifetime of hauling heavy loads means armor barely slows or starves them. They are poor fighters though, and have no love for the dark of the mines.",
+
+	"trait-farmer": "<font color=\"#84ff84\">• Green Thumb </font>",
+	"traitname-farmer": "Green Thumb",
+	"traitdesc-farmer": "Harvests extra produce from planted crops",
+
+	"trait-burdened": "<font color=\"#84ff84\">• Beast of Burden </font>",
+	"traitname-burdened": "Beast of Burden",
+	"traitdesc-burdened": "Used to carrying heavy loads all day: armor's movement penalty is greatly reduced, and its hunger cost is cut down to light-armor levels",
+
+	"trait-gentlehands": "<font color=\"#ff8484\">• Gentle Hands </font>",
+	"traitname-gentlehands": "Gentle Hands",
+	"traitdesc-gentlehands": "More used to the hoe than the blade: deals less damage in melee",
+
+	"charattribute-produceDropRate-0.25": "+25% extra produce when harvesting planted crops",
+	"charattribute-armorWalkSpeedAffectedness--0.35": "-35% armor walk speed penalty, -40% armor hunger penalty",
+	"charattribute-meleeWeaponsDamage--0.2": "-20% melee damage"
+}

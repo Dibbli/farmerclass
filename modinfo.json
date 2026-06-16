@@ -1,0 +1,11 @@
+{
+	"type": "code",
+	"modid": "farmerclass",
+	"name": "Farmer Class",
+	"description": "Simple farmer class for a friend",
+	"version": "1.0.0",
+	"authors": ["Dibbli"],
+	"requiredOnClient": true,
+	"requiredOnServer": true,
+	"side": "universal"
+}
