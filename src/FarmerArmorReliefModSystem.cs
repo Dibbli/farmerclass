@@ -4,17 +4,10 @@ using Vintagestory.API.Server;
 
 namespace FarmerClass
 {
-    // The farmer is "used to carrying stuff all day", so heavy armor barely starves them.
-    // Vanilla only has a global `hungerrate` stat (armor adds to it: plate +0.24, chain +0.075...),
-    // so we cancel part of the ARMOR-SOURCED hunger only, leaving base hunger untouched.
-    // The movement half of this fantasy is done in JSON via the `armorWalkSpeedAffectedness` trait stat.
+    // Reduces only the hunger penalty contributed by worn armor.
     public class FarmerArmorReliefModSystem : ModSystem
     {
-        // Fraction of armor-sourced hunger removed for a farmer.
-        // 0.4 -> full plate's +72% armor hunger drops to ~+43%. Tune freely.
         const float ArmorHungerReduction = 0.4f;
-
-        // Our own stat key; vanilla/other systems never touch this category.
         const string ReliefCategory = "farmerarmorrelief";
 
         public override bool ShouldLoad(EnumAppSide side) => side == EnumAppSide.Server;
@@ -27,15 +20,9 @@ namespace FarmerClass
         private void OnPlayerNowPlaying(IServerPlayer player)
         {
             var inv = player.InventoryManager?.GetOwnInventory(GlobalConstants.characterInvClassName);
-            if (inv != null)
-            {
-                // Recompute whenever worn gear changes (armor put on / taken off).
-                inv.SlotModified += _ => UpdateRelief(player);
-            }
+            if (inv != null) inv.SlotModified += _ => UpdateRelief(player);
 
-            // Recompute when the player (re)selects their class.
             player.Entity?.WatchedAttributes.RegisterModifiedListener("characterClass", () => UpdateRelief(player));
-
             UpdateRelief(player);
         }
 
@@ -64,7 +51,6 @@ namespace FarmerClass
                 }
             }
 
-            // Negative offset cancels part of the armor's hunger contribution. Base hunger is unaffected.
             entity.Stats.Set("hungerrate", ReliefCategory, -ArmorHungerReduction * armorHunger, false);
         }
     }
